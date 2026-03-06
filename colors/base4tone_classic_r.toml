@@ -1,0 +1,32 @@
+[metadata]
+name = "Base4Tone Classic R"
+author = ""
+
+[colors]
+foreground = "#98949e"
+background = "#1e1d20"
+cursor_bg = "#6f7285"
+cursor_fg = "#1e1d20"
+cursor_border = "#6f7285"
+
+ansi = [
+    "#1e1d20",  # black
+    "#d53975",  # red
+    "#6577ec",  # green
+    "#a0acf8",  # yellow
+    "#af88f2",  # blue
+    "#d763e9",  # magenta
+    "#8493f6",  # cyan
+    "#eae8ed",  # white
+]
+
+brights = [
+    "#09070d",  # bright black
+    "#eb75a2",  # bright red
+    "#aeb8f9",  # bright green
+    "#c6cdfb",  # bright yellow
+    "#ddcbfb",  # bright blue
+    "#e17ef1",  # bright magenta
+    "#d6c2fa",  # bright cyan
+    "#f7f6f9",  # bright white
+]

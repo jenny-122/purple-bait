@@ -1,0 +1,9 @@
+ctrl + v 
+
+** highlight where you want it to go
+
+shift + i
+
+** type what you want to duplicate
+
+escape

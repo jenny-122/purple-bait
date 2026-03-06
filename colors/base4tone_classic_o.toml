@@ -1,0 +1,32 @@
+[metadata]
+name = "Base4Tone Classic O"
+author = ""
+
+[colors]
+foreground = "#8995a9"
+background = "#1a1d23"
+cursor_bg = "#6d8884"
+cursor_fg = "#1a1d23"
+cursor_border = "#6d8884"
+
+ansi = [
+    "#1a1d23",  # black
+    "#a24ad9",  # red
+    "#0d9c89",  # green
+    "#1ed2ba",  # yellow
+    "#74a8fb",  # blue
+    "#9488f2",  # magenta
+    "#1bbba6",  # cyan
+    "#e7eaee",  # white
+]
+
+brights = [
+    "#07090d",  # bright black
+    "#c27eed",  # bright red
+    "#2fdac3",  # bright green
+    "#93ece0",  # bright yellow
+    "#c7dcff",  # bright blue
+    "#aba1f7",  # bright magenta
+    "#c2d9ff",  # bright cyan
+    "#f6f7f9",  # bright white
+]

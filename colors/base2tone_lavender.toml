@@ -1,0 +1,32 @@
+[metadata]
+name = "Base2Tone Lavender"
+author = ""
+
+[colors]
+foreground = "#9992b0"
+background = "#201d2a"
+cursor_bg = "#b042ff"
+cursor_fg = "#201d2a"
+cursor_border = "#b042ff"
+
+ansi = [
+    "#201d2a",  # black
+    "#9375f5",  # red
+    "#d294ff",  # green
+    "#ecd1ff",  # yellow
+    "#a286fd",  # blue
+    "#d294ff",  # magenta
+    "#b5a0fe",  # cyan
+    "#9992b0",  # white
+]
+
+brights = [
+    "#625a7c",  # bright black
+    "#dba8ff",  # bright red
+    "#2c2839",  # bright green
+    "#4b455f",  # bright yellow
+    "#6e658b",  # bright blue
+    "#dcd2fe",  # bright magenta
+    "#ca80ff",  # bright cyan
+    "#efebff",  # bright white
+]

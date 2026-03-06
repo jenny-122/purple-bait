@@ -1,0 +1,32 @@
+[metadata]
+name = "Base2Tone Suburb"
+author = ""
+
+[colors]
+foreground = "#878ba6"
+background = "#1e202f"
+cursor_bg = "#d14781"
+cursor_fg = "#1e202f"
+cursor_border = "#d14781"
+
+ansi = [
+    "#1e202f",  # black (color_01)
+    "#7586f5",  # red (color_02)
+    "#fb6fa9",  # green (color_03)
+    "#ffb3d2",  # yellow (color_04)
+    "#8696fd",  # blue (color_05)
+    "#fb6fa9",  # magenta (color_06)
+    "#a0acfe",  # cyan (color_07)
+    "#878ba6",  # white (color_08)
+]
+
+brights = [
+    "#4f5472",  # bright black (color_09)
+    "#fe81b5",  # bright red (color_10)
+    "#292c3d",  # bright green (color_11)
+    "#444864",  # bright yellow (color_12)
+    "#5b6080",  # bright blue (color_13)
+    "#d2d8fe",  # bright magenta (color_14)
+    "#f764a1",  # bright cyan (color_15)
+    "#ebedff",  # bright white (color_16)
+]

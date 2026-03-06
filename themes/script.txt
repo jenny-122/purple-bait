@@ -1,0 +1,8 @@
+dependencies:
+uv pip install yq tomlkit
+
+script used:
+
+**needs subprocess btw
+
+yq -o toml '.' input.yaml > output.toml

@@ -1,0 +1,101 @@
+----------------------------
+-- jenn's wezterm config --
+----------------------------
+local wezterm = require 'wezterm'
+local act = wezterm.action
+
+local c = wezterm.config_builder and wezterm.config_builder() or {}
+if c.set_strict_mode then c:set_strict_mode(true) end
+
+-------------------
+-- Theme System ---
+-------------------
+
+c.color_scheme_dirs = { "/Users/jxp/.config/wezterm/colors" }
+
+-- Theme list
+local themes = {
+    'Base2Tone Suburb',
+    'Base4Tone Classic O',
+    'Base4Tone Classic P',
+    'Base4Tone Classic Q',
+    'Base4Tone Classic R',
+    'Base4Tone Classic S',
+    'Base2Tone Lavender',
+}
+
+-- Theme cycling
+local current = 1
+c.color_scheme = themes[current]
+
+wezterm.on('update-status', function(window, pane)
+    window:set_left_status(wezterm.format({
+        { Foreground = { Color = '#808080' } },
+        { Text = ' 🎨 ' .. themes[current] .. ' ' },
+    }))
+end)
+
+---------------------
+-- Key Bindings ----
+---------------------
+
+-- Build key table
+local keys = {}
+
+-- Disable Mac defaults
+for _, k in ipairs({ 'm', 'h', 'l', 'f' }) do
+    table.insert(keys, { key = k, mods = 'CMD', action = act.DisableDefaultAssignment })
+end
+table.insert(keys, { key = 'h', mods = 'CTRL', action = act.DisableDefaultAssignment })
+table.insert(keys, { key = 'h', mods = 'CTRL|SHIFT', action = act.DisableDefaultAssignment })
+
+-- Custom bindings
+local bindings = {
+    -- Panes
+    { 'f', 'CMD', act.TogglePaneZoomState },
+    { ']', 'CMD', act.SplitVertical({ domain = 'CurrentPaneDomain' }) },
+    { '[', 'CMD', act.SplitHorizontal({ domain = 'CurrentPaneDomain' }) },
+    { 'd', 'CMD', act.CloseCurrentPane({ confirm = true }) },
+    -- Navigate
+    { 'h', 'CMD', act.ActivatePaneDirection('Left') },
+    { 'j', 'CMD', act.ActivatePaneDirection('Down') },
+    { 'k', 'CMD', act.ActivatePaneDirection('Up') },
+    { 'l', 'CMD', act.ActivatePaneDirection('Right') },
+    -- Resize
+    { 'H', 'CMD', act.AdjustPaneSize({ 'Left', 5 }) },
+    { 'J', 'CMD', act.AdjustPaneSize({ 'Down', 5 }) },
+    { 'K', 'CMD', act.AdjustPaneSize({ 'Up', 5 }) },
+    { 'L', 'CMD', act.AdjustPaneSize({ 'Right', 5 }) },
+    -- Theme cycling
+    { 'A', 'ALT|SHIFT', wezterm.action_callback(function(window, pane)
+        current = current % #themes + 1
+        window:set_config_overrides({ color_scheme = themes[current] })
+        window:toast_notification('wezterm', 'Theme: ' .. themes[current], nil, 2000)
+    end) },
+    { 'v', 'ALT', act.ActivateCopyMode },
+    { 'u', 'ALT', act.CopyMode('ClearPattern') },
+}
+
+for _, b in ipairs(bindings) do
+    table.insert(keys, { key = b[1], mods = b[2], action = b[3] })
+end
+
+c.keys = keys
+
+---------------------
+-- Appearance ------
+---------------------
+
+c.font_size = 18
+c.window_padding = { left = '1cell', right = '1cell', top = '0.5cell', bottom = '0.5cell', }
+c.window_decorations = 'RESIZE'
+c.use_fancy_tab_bar = true
+c.hide_tab_bar_if_only_one_tab = true
+c.adjust_window_size_when_changing_font_size = false
+c.enable_wayland = false
+c.front_end = 'WebGpu'
+c.status_update_interval = 1000
+c.enable_scroll_bar = false
+c.window_background_opacity = 1
+c.macos_window_background_blur = 50
+return c

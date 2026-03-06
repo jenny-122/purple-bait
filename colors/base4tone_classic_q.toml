@@ -1,0 +1,32 @@
+[metadata]
+name = "Base4Tone Classic Q"
+author = ""
+
+[colors]
+foreground = "#95949e"
+background = "#1d1d20"
+cursor_bg = "#67768e"
+cursor_fg = "#1d1d20"
+cursor_border = "#67768e"
+
+ansi = [
+    "#1d1d20",  # black
+    "#d4359a",  # red
+    "#4287f5",  # green
+    "#88b4fc",  # yellow
+    "#a095f3",  # blue
+    "#ba6cea",  # magenta
+    "#659efb",  # cyan
+    "#e9e8ed",  # white
+]
+
+brights = [
+    "#08070d",  # bright black
+    "#eb75c0",  # bright red
+    "#9cc1fc",  # bright green
+    "#c2d9ff",  # bright yellow
+    "#d9d5fc",  # bright blue
+    "#c988f2",  # bright magenta
+    "#d1cbfb",  # bright cyan
+    "#f6f6f9",  # bright white
+]

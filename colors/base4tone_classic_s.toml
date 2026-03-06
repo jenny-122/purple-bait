@@ -1,0 +1,32 @@
+[metadata]
+name = "Base4Tone Classic S"
+author = ""
+
+[colors]
+foreground = "#9a949e"
+background = "#1f1d20"
+cursor_bg = "#767481"
+cursor_fg = "#1f1d20"
+cursor_border = "#767481"
+
+ansi = [
+    "#1f1d20",  # black
+    "#d64f3d",  # red
+    "#7e70e6",  # green
+    "#aba1f7",  # yellow
+    "#c27eed",  # blue
+    "#e963b8",  # magenta
+    "#9488f2",  # cyan
+    "#ebe8ed",  # white
+]
+
+brights = [
+    "#0b070d",  # bright black
+    "#eb8275",  # bright red
+    "#b7aff8",  # bright green
+    "#d1cbfb",  # bright yellow
+    "#e6c8f9",  # bright blue
+    "#f17ec7",  # bright magenta
+    "#e0baf7",  # bright cyan
+    "#f8f6f9",  # bright white
+]

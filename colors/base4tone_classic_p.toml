@@ -1,0 +1,32 @@
+[metadata]
+name = "Base4Tone Classic P"
+author = ""
+
+[colors]
+foreground = "#9092a2"
+background = "#1c1d21"
+cursor_bg = "#6a878a"
+cursor_fg = "#1c1d21"
+cursor_border = "#6a878a"
+
+ansi = [
+    "#1c1d21",  # black
+    "#c039d5",  # red
+    "#1398aa",  # green
+    "#3ccadd",  # yellow
+    "#929ff7",  # blue
+    "#a57af0",  # magenta
+    "#23b4c7",  # cyan
+    "#e8e8ee",  # white
+]
+
+brights = [
+    "#07080d",  # bright black
+    "#db75eb",  # bright red
+    "#5ad2e2",  # bright green
+    "#a4e6ef",  # bright yellow
+    "#d0d5fb",  # bright blue
+    "#b792f6",  # bright magenta
+    "#c6cdfb",  # bright cyan
+    "#f6f6f9",  # bright white
+]
