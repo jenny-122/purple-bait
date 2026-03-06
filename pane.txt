@@ -1,5 +1,0 @@
-shift + opt + q --close pane
-
-opt + --new pane to the right
-
-opt + - --new pane down

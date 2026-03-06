@@ -1,3 +1,0 @@
-option + shift + 'T'
-
-alt+ shift +'T'
